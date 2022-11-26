@@ -14,7 +14,7 @@ public class StackOperations {
         System.out.println("\n------------------------------------------------\n");
         while (choice != 3) {
             System.out.println("\nChose one from the below options...");
-            System.out.println("\n1.Push\n2.Show\n3.Exit");
+            System.out.println("\n1.Push\n2.Pop\n3.Display\n4.Exit");
             System.out.println("\n Enter your choice:");
             choice = sc.nextInt();
             switch (choice) {
@@ -22,11 +22,16 @@ public class StackOperations {
                     s.push(sc);//70,30,56
                     break;
                 }
-                case 2: {
-                    s.display();
+                case 2:
+                {
+                    s.pop();
                     break;
                 }
                 case 3: {
+                    s.display();
+                    break;
+                }
+                case 4: {
                     System.out.println("Exiting....");
                     System.exit(0);
                     break;

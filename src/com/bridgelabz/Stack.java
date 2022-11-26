@@ -32,6 +32,21 @@ public class Stack {
             return true;
         }
     }
+
+    boolean pop ()
+    {
+        if (top == -1)
+        {
+            System.out.println("Underflow !!");
+            return false;
+        }
+        else {
+            top--;
+            System.out.println("Item popped");
+            return true;
+        }
+    }
+
     void display()
     {
         System.out.println("Printing stack elements .....");
