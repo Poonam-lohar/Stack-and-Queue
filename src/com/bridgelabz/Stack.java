@@ -1,9 +1,42 @@
 package com.bridgelabz;
 
+import java.util.Scanner;
+
 public class Stack {
 
-    public static void main(String[] args) {
+    int top;
+    int maxsize = 5;
+    int[] arr = new int[maxsize];
 
-        System.out.println("Welcome To Stack Operation Programs");
+    boolean isEmpty ()
+    {
+
+        return (top < 0);
+    }
+    Stack()
+
+    {
+        top = -1;
+    }
+    public boolean push (Scanner sc)
+    {
+        if (top == maxsize - 1) {
+            System.out.println("Overflow !!");
+            return false;
+        } else {
+            System.out.println("Enter Value");
+            int val = sc.nextInt();
+            top++;
+            arr[top] = val;
+            System.out.println("Item pushed");
+            return true;
+        }
+    }
+    void display()
+    {
+        System.out.println("Printing stack elements .....");
+        for (int i = top; i >= 0; i--) {
+            System.out.println(arr[i]);
+        }
     }
 }
